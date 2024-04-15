@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>É o jogas</title>
+    <link rel="stylesheet" href="style.css" class="css">
+
+</head>
+<body>
+    <div class="container">
+    <h1>Vamos de gameplay?</h1>
+    <button onclick="sim()">SIM</button>
+    <button class="ìnclicavel"  onclick="desvia()" onmouseover="desvia()">NÃO</button>
+    
+    </div>
+<script> function sim(){
+    alert('você aceitou o gameplay agora não tem mais volta, te encontro na botlane <3');
+}
+
+function desvia(){
+    var btn = document.querySelector('body > div.container > button.ìnclicavel');
+    btn.style.position = 'absolute';
+    btn.style.bottom = geraPosicao(10, 90);
+    btn.style.left = geraPosicao(10, 90);
+    console.log('opa, tente de novo...');
+
+   function geraPosicao(min, max){
+       return (Math.random() * (max - min) + min) + "%";
+   } 
+}
+</script>
+</body>
+</html>
